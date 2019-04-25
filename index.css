@@ -1,0 +1,60 @@
+#scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  background-color: lightblue;
+  z-index: 0;
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 20vh;
+  background-color: rgb(128, 109, 49);
+  z-index: 0;
+}
+
+#car {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  animation-name: drive;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes drive {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  100% {
+    transform: translate(35vw, 0vh);
+  }
+}
+
+#house {
+  height: 400px;
+  position: absolute;
+  bottom: 15vh;
+  left: 40vw;
+  z-index: 2;
+}
+
+#tree {
+  height: 700px;
+  position: absolute;
+  bottom: 15vh;
+  left: 50vw;
+  z-index: 1;
+}
